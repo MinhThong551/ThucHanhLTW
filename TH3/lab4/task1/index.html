@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+</head>
+<style>
+    .container{
+
+        height: 100vh;
+    }
+    button{
+        height: 30px;
+        padding: 10px;
+        cursor: pointer;
+
+    }
+    .container.red , .red{
+        background-color: red ;
+    }
+    .container.orange, .orange{
+        background-color: orange ;
+    }
+    .container.yellow, .yellow{
+        background-color: yellow ;
+    }
+
+    .container.green ,.green{
+        background-color:green;
+    }
+    .container.blue, .blue{
+        background-color:blue;
+    }
+    .container.gray, .gray{
+        background-color:gray !important;
+    }
+    .container.purple, .purple{
+        background-color:purple;
+    }
+</style>
+<body>
+<div class="container">
+    <button class="red">Red</button>
+    <button class="orange">Orange</button>
+    <button class="yellow">Yellow</button>
+    <button class="green">Green</button>
+    <button class="blue">Blue</button>
+    <button class="gray">Gray</button>
+    <button class="purple">Purple</button>
+</div>
+
+
+</body>
+
+<script>
+    const container = document.querySelector(".container");
+    const btnRed = document.querySelector(".red");
+    const btnOrange = document.querySelector(".orange");
+    const btnBlue = document.querySelector(".blue");
+
+    const btnGreen = document.querySelector(".green");
+    const btnYellow = document.querySelector(".yellow");
+    const btnGray = document.querySelector(".gray");
+    const btnPurple = document.querySelector(".purple");
+
+    function clearColor(){
+        container.classList.remove("red","orange","green","blue","yellow","gray","purple");
+    }
+    btnRed.addEventListener("click",
+        function () {
+            clearColor();
+            container.classList.add("red");
+        });
+        // btnRed.style.background = "red";
+
+    btnOrange.addEventListener("click", function () {
+        clearColor();
+        container.classList.add("orange");
+    });
+    btnYellow.addEventListener("click",
+        function () {
+            clearColor();
+            container.classList.add("yellow");
+
+        });
+    btnGreen.addEventListener("click" , function (){
+        clearColor();
+        container.classList.add("green");
+
+    } );
+    btnBlue.addEventListener("click", function () {
+       clearColor();
+        container.classList.add("blue");
+    });
+    btnGray.addEventListener("click" , function (){
+        clearColor();
+        container.classList.add("gray");
+
+    } );
+    btnPurple.addEventListener("click" , function (){
+        clearColor();
+        container.classList.add("purple");
+
+    } );
+
+</script>
+</html>
