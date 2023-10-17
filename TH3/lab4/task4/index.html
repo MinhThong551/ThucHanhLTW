@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+</head>
+
+<body>
+<div class="container">
+    <form action="">
+        <textarea id="textarea"></textarea> </br>
+
+        <input type="text" id="text_field"> </br>
+
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+
+</div>
+</body>
+<style>
+    .container textarea{
+        width:500px;
+        height: 100px;
+
+    }
+    .container input {
+        width: 500px;
+        height: 30px;
+    }
+    .container button {
+        padding: 10px;
+    }
+</style>
+<script>
+    var submitBtn = document.getElementById("submit");
+    submitBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        var doanA = document.getElementById("textarea").value;
+        var  doanB = document.getElementById("text_field").value;
+        var dem = soLanXuatHien(doanA ,doanB );
+        document.getElementById("result").textContent = "Số lần xuất hiện của B trong A là: " + dem;
+
+    })
+
+    function  soLanXuatHien(text, paragraph) {
+        // biểu thức chính quy
+        var regex = new RegExp(paragraph,'g');
+        var matches = text.match(regex);
+        if(matches == null) {
+            return 0;
+        }
+        return  matches.length;
+    }
+</script>
+</html>

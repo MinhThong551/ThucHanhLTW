@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+    .img img{
+        border-radius:50% ;
+        border: 2px solid aqua;
+       box-shadow: aqua ;
+        height: 600px;
+        transform-origin: center;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="img">
+        <img id="image" src="img/hehhe.png">
+    </div>
+</div>
+</body>
+<script>
+    var image = document.getElementById("image");
+    var rotationDegree = 0;
+    function xoayHinh() {
+        rotationDegree += 15;
+        image.style.transform = "rotate(" + rotationDegree + "deg)";
+    }
+    setInterval(xoayHinh, 2000);
+</script>
+</html>
+
+</body>
+</html>

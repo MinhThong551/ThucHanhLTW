@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>ContactForm</title>
+</head>
+<body>
+
+<div class="container">
+    <form>
+        <div class="main">
+            <h1 id="contact"> Contact Us</h1>
+            <div class="inputName">
+                <label id="label1" for="fName">Full Name*</label><br>
+                <input type="text" id="fName" name="fName" placeholder="Enter Your Name">
+            </div>
+            <p class="error" id="fName_error"></p>
+            <div class=" inputFlex">
+                <div class="inputEmail">
+                    <label id="label2" for="fEmail">Email</label><br>
+                    <input type="email" id="fEmail" name="fEmail" placeholder="Enter Your Email">
+                </div>
+                <div class="inputPhone">
+                    <label id="label3" for="fPhone">Phone</label><br>
+                    <input type="tel" id="fPhone" name="fPhone" placeholder="Enter Your Phone">
+                </div>
+            </div>
+            <p class="error" id="fEmail_error"></p>
+            <div class="inputOne">
+                <div class="inputServices">
+                    <label id="label4" for="fServices">NEDDED SERVICE*</label><br>
+
+                    <select id="fServices" name="fServices">
+                        <option disabled selected>Please Chooses</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+            <p class="error" id="fServices_error"></p>
+            <div class="inputTwo">
+                <div class="inputMessage">
+                    <label id="label5" for="fMessage">Message</label><br>
+                    <textarea id="fMessage" name="fMessage" placeholder="Your Message here..." ></textarea>
+
+                </div>
+            </div>
+            <div class="inputThree">
+                <div class="inputSubmit">
+                    <input type="submit" id="fSubmit" name="fSubmit" placeholder="Enter Your Phone">
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+</body>
+<script>
+    // validate for full name
+    var fNameInput = document.getElementById("fName");
+    var fNameError = document.getElementById("fName_error");
+    function checkFullName() {
+        var fName = fNameInput.value;
+        if (fName == null || fName.length == 0) {
+            fNameError.textContent = "Please fill in full name."
+            fNameError.style.display = "block";
+            return false;
+        } else if (fName.length < 6) {
+            fNameError.textContent = "Full name must be at least 6 characters."
+            fNameError.style.display = "block";
+            return false;
+        } else {
+            fNameError.style.display = "none";
+            return true;
+        }
+    }
+
+    // validate for email
+    var fEmailInput = document.getElementById("fEmail");
+    var fEmailError = document.getElementById("fEmail_error");
+    function checkEmail() {
+        var fEmail = fEmailInput.value;
+        if (fEmail == null || fEmail.length == 0) {
+            fEmailError.textContent = "Please fill in your email.";
+            fEmailError.style.display = "block";
+            return false;
+        } else {
+            var emailValid = "@gmail.com";
+            if (!fEmail.includes(emailValid)) {
+                fEmailError.textContent = "Please fill in correct email type.";
+                fEmailError.style.display = "block";
+                return false;
+            } else {
+                fEmailError.style.display = "none";
+                return true;
+            }
+        }
+    }
+
+    // validate for needed services
+    var fServicesInput = document.getElementById("fServices");
+    var fServicesError = document.getElementById("fServices_error");
+    function checkServices() {
+        var fServices = fServicesInput.value;
+        if (fServices == null || fServices.length == 0) {
+            fServicesError.textContent = "Please choose a service";
+            fServicesError.style.display = "block";
+            return false;
+        } else {
+            fServicesError.style.display = "none";
+            return true;
+        }
+    }
+
+    // Xác định sự kiện gọi các hàm kiểm tra khi người dùng thao tác
+    fNameInput.addEventListener("blur", checkFullName);
+    fEmailInput.addEventListener("blur", checkEmail);
+    fServicesInput.addEventListener("change", checkServices);
+
+    // check button
+    var submitBtn = document.getElementById("fSubmit");
+    submitBtn.addEventListener("click", function (event) {
+        if (checkServices() && checkEmail() && checkFullName()) {
+            alert("Thanks for your contact.");
+        } else {
+            event.preventDefault();
+            checkFullName();
+            checkEmail();
+            checkServices();
+        }
+    });
+</script>
+</html>
