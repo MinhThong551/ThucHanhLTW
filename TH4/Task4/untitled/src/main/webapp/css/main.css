@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+
+}
+
+body {
+    background-size: 100%;
+    background-image: url("img/bg1.jpg");
+
+    background-repeat: no-repeat;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+form {
+
+    margin-top: 100px;
+    width: 250px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: floralwhite;
+    padding: 15px 30px;
+    /*text-align: center;*/
+    border-radius: 15px;
+
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+
+}
+
+.inputOne, .inputTwo, .inputThree {
+    padding-top: 30px;
+
+}
+
+.inputEmail input , .inputPassword input {
+    border: none;
+    outline: none;
+
+}
+#fEmail {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 100%;
+    margin-left: -12px;
+    margin-top: 12px;
+}
+#fPassword{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 100%;
+    margin-left: -12px;
+    margin-top: 12px;
+}
+
+.inputEmail {
+    cursor: pointer ;
+    border: dodgerblue 1px solid;
+    box-shadow: 2px 2px 2px dodgerblue;
+    height: 40px;
+    /*padding-top: 20px;*/
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color: white;
+
+}
+.inputPassword{
+    cursor: pointer ;
+    border: dodgerblue 1px solid;
+    box-shadow: 2px 2px 2px dodgerblue;
+    height: 40px;
+    /*padding-top: 20px;*/
+    border-radius: 20px;
+    padding-left: 20px;
+    background-color: white;
+
+}
+
+/*.inputPassword{*/
+/*    width: 100%;*/
+/*}*/
+/*#fPassword {*/
+
+/*    width: 100%;*/
+/*    cursor: pointer ;*/
+/*    border: dodgerblue 1px solid;*/
+/*    box-shadow: 2px 2px 2px dodgerblue;*/
+/*    height: 25px;*/
+/*    padding-top: 20px;*/
+/*    border-radius: 20px;*/
+/*    !*padding-left: 20px;*!*/
+
+
+
+
+
+.inputSubmit {
+
+    text-align: center;
+}
+
+#fSubmit {
+    cursor: pointer ;
+    color: white;
+    width: 60%;
+    background-color: #bd59d7;
+    text-align: center;
+    height: 35px;
+    border: 1px solid #bd59d7;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px #bd59d7;
+
+}
+
+::placeholder {
+    color: black;
+    font-weight: bold;
+
+
+}
+
+.paragraph {
+    padding-top: 30px;
+    text-align: center;
+
+    opacity: 0.5;
+}
+
+.icon {
+
+    display: flex;
+    text-align: center;
+    padding-top: 40px;
+    justify-content: center;
+
+
+}
+
+.icon .fa-facebook-f, .icon .fa-google {
+    font-size: 20px;
+
+    text-align: center;
+
+
+}
+
+.circleF {
+    cursor: pointer ;
+    color: blue;
+    justify-content: center;
+    padding-top: 10px;
+    height: 30px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: white;
+
+}
+
+.circleG {
+    cursor: pointer ;
+    justify-content: center;
+    padding-top: 10px;
+    height: 30px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px black;
+
+}
+
+.signUp {
+
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+#sign{
+    cursor: pointer;
+}
+.error {
+    color: red;
+    padding: 5px 20px;
+    display: none;
+}
+
